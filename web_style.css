@@ -1,0 +1,133 @@
+@media screen and (min-width: 992px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  body {
+    font-family: "noto sans kr", sans-serif;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  header {
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 10px;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+    line-height: 2em;
+    border-radius: 25px;
+    background-color: black;
+    position: absolute;
+    left: calc(50% - 150px);
+  }
+  .play {
+    height: 40px;
+    border-radius: 25px;
+    position: absolute;
+    left: 55px;
+    top: calc(50% - 20px);
+    opacity: 0;
+  }
+  .beep {
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    right: 48px;
+    top: calc(50% - 25px);
+    opacity: 0;
+  }
+  header h1:hover {
+    width: 240px;
+    transition: 1s;
+  }
+  header:hover .play {
+    opacity: 1;
+    transition: 4s;
+  }
+  header:hover .beep {
+    opacity: 1;
+    transition: 4s;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+  }
+  .section {
+    width: 50%;
+    height: 50%;
+    float: left;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    position: relative;
+  }
+  ul.icons {
+    list-style-type: none;
+    width: 540px;
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 270px);
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    padding-top: 10px;
+  }
+  .section:hover > ul.icons {
+    animation: slide 1s ease-in-out forwards;
+  }
+  .icons li {
+    display: inline-block;
+    margin: 0 30px;
+  }
+  .icons a {
+    font-size: 12px;
+    font-weight: 100;
+    color: #ccc;
+  }
+  section:hover {
+    filter: grayscale(0);
+  }
+  #sec1 {
+    background-image: url(./images/section1.jpg);
+  }
+  #sec2 {
+    background-image: url(./images/section2.jpg);
+  }
+  #sec3 {
+    background-image: url(./images/section3.jpg);
+  }
+  #sec4 {
+    background-image: url(./images/section4.jpg);
+  }
+  @keyframes slide {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
